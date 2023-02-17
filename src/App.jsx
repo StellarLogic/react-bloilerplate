@@ -3,7 +3,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./Routes/routes";
-
+import Login from "./Form/Login.jsx";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -19,10 +19,7 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
     <div className="app">
-      <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
-        <ReactQueryDevtools initialisopen={false} />
-      </QueryClientProvider>
+      <Login></Login>
     </div>
   );
 };
